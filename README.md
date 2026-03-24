@@ -1,18 +1,16 @@
-# PDF Stitcher (Visual Seamless)
+# PDF Stitcher GUI v2.0 (Windows Native)
 
-基于视觉识别的 PDF 表格垂直无缝拼接工具。专门解决由于设计问题导致的表格被拆分为两页、中间有白边空隙的问题。
+这款工具可以将 PDF 表格的连续两页垂直拼接为一页，完美解决表格断开的问题。
 
-## 功能特性
-- **视觉识别拼接**：自动剥离 PDF 白边，实现表格内容的物理级接触。
-- **边缘留白**：自动在拼接后的页面四周添加留白，提升阅读舒适度。
-- **高清输出**：默认 300 DPI 采样。
-- **批量处理**：支持超大 PDF 文件。
+## 核心优势
+- **纯 Python 实现**：无需在 Windows 下安装 Poppler, qpdf 或 Ghostscript。
+- **图形界面**：支持可视化文件选择。
+- **独立运行**：使用 pyinstaller 封装后，单文件即可在任何 Windows 电脑运行。
 
-## 使用方法 (Python)
-1. 安装依赖: `pip install -r requirements.txt`
-2. 安装系统依赖: `sudo apt install poppler-utils qpdf` (Linux) 或安装 Poppler (Windows)
-3. 运行: `python pdf_stitcher.py input.pdf output.pdf`
+## 开发者快速构建
+1. 安装 Python 3.10+
+2. 双击运行 `build_windows.bat`
+3. 在 `dist` 文件夹中找到 `PDFStitcherV2.exe`
 
-## 封装为 Windows .exe
-1. 在 Windows 下运行 `pip install pyinstaller pillow`
-2. 执行: `pyinstaller --onefile pdf_stitcher.py`
+## 针对用户
+只需双击 `PDFStitcherV2.exe` 即可使用。
